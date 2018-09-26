@@ -3,10 +3,11 @@ package hospital;
 public class Janitor extends Employee {
 
 	private boolean sweeping;
+
 	public Janitor(String name, String employeeNumber, int salary) {
-		super(name, employeeNumber,salary);
-		this.sweeping = false;
-	
+		super(name, employeeNumber, salary);
+		sweeping = false;
+
 	}
 
 	public boolean isSweeping() {
@@ -14,14 +15,14 @@ public class Janitor extends Employee {
 	}
 
 	public void toggleSweeping() {
-		sweeping = !sweeping; 
-		
+		sweeping = !sweeping;
+
 	}
 
 	@Override
 	public String toString() {
-		return "Employee [name=" + getName() + ", employeeNumber=" + getEmployeeNumber() + ", salary=" + getSalary() + ", sweeping=" + sweeping +  "]";
+		return "Janitor [name=" + getName() + ", employeeNumber=" + getEmployeeNumber() + ", salary=" + getSalary()
+				+ ", sweeping=" + sweeping + "]";
 	}
-
 
 }

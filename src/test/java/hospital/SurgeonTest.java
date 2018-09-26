@@ -12,7 +12,7 @@ public class SurgeonTest {
 	@Test
 	public void shouldHaveSalary() {
 		//Arrange
-		Surgeon underTest = new Surgeon("","","");
+		Surgeon underTest = new Surgeon("","","", 12000);
 		//Act
 		int salary = underTest.getSalary();
 		//Assert
@@ -22,7 +22,7 @@ public class SurgeonTest {
 	@Test
 	public void shouldBeOperating() {
 		//arrange
-		Surgeon underTest = new Surgeon("","", "");
+		Surgeon underTest = new Surgeon("","", "", 12000);
 		//act
 		underTest.toggleOperating();
 		boolean result = underTest.isOperating();
@@ -33,7 +33,7 @@ public class SurgeonTest {
 	@Test
 	public void shouldNotOperating() {
 		//arrange
-		Surgeon underTest = new Surgeon("","", "");
+		Surgeon underTest = new Surgeon("","", "", 12000);
 		underTest.toggleOperating();
 		underTest.toggleOperating();
 		boolean result = underTest.isOperating();
@@ -43,7 +43,7 @@ public class SurgeonTest {
 	@Test
 	public void shouldHaveSpecialty() {
 		//arrange
-		Surgeon underTest = new Surgeon("","", "hand");
+		Surgeon underTest = new Surgeon("","", "hand", 12000);
 		//act
 		String result = underTest.getSpecialty();
 		Assert.assertEquals("hand", result);
@@ -52,7 +52,7 @@ public class SurgeonTest {
 	@Test
 	public void shouldHaveNewSpecialty() {
 		//arrange
-		Surgeon underTest = new Surgeon("","","buttocks");
+		Surgeon underTest = new Surgeon("","","buttocks", 12000);
 		//act
 		String result = underTest.getSpecialty();
 		Assert.assertEquals("buttocks", result);
@@ -60,7 +60,7 @@ public class SurgeonTest {
 	
 	@Test
 	public void shouldHaveAName() {
-		Surgeon underTest = new Surgeon("Robert", "","buttocks");
+		Surgeon underTest = new Surgeon("Robert", "","buttocks", 12000);
 		
 		String result = underTest.getName();
 		
@@ -69,7 +69,7 @@ public class SurgeonTest {
 	
 	@Test
 	public void shouldHaveANameOtherThanRobertAnyOneElse() {
-		Surgeon underTest = new Surgeon("Dr. Spaceman", "Emp 2","buttocks");
+		Surgeon underTest = new Surgeon("Dr. Spaceman", "Emp 2","buttocks", 12000);
 		
 		String result = underTest.getName();
 		
@@ -77,7 +77,7 @@ public class SurgeonTest {
 	}
 	@Test
 	public void shouldDrawBlood() {
-		Surgeon underTest = new Surgeon("Emp 2","Dr. Spaceman", "buttocks");
+		Surgeon underTest = new Surgeon("Emp 2","Dr. Spaceman", "buttocks", 12000);
 		
 		Patient bob = new Patient();
 		underTest.drawBlood(bob);
@@ -86,7 +86,7 @@ public class SurgeonTest {
 	}
 	@Test
 	public void shouldDrawMoreBlood() {
-		Surgeon underTest = new Surgeon("Emp 2","Dr. Spaceman", "buttocks");
+		Surgeon underTest = new Surgeon("Emp 2","Dr. Spaceman", "buttocks", 12000);
 		
 		Patient bob = new Patient();
 		underTest.drawBlood(bob);
@@ -96,7 +96,7 @@ public class SurgeonTest {
 	}
 	@Test
 	public void increasePatientHealth() {
-		Surgeon underTest = new Surgeon("Emp 2","Dr. Spaceman", "buttocks");
+		Surgeon underTest = new Surgeon("Emp 2","Dr. Spaceman", "buttocks", 12000);
 		
 		Patient bob = new Patient();
 		underTest.increasePatientHealth(bob);
@@ -105,7 +105,7 @@ public class SurgeonTest {
 	}
 	@Test
 	public void increasePatientHealth2() {
-		Surgeon underTest = new Surgeon("Dr. Spaceman","Emp 2", "buttocks");
+		Surgeon underTest = new Surgeon("Dr. Spaceman","Emp 2", "buttocks", 12000);
 		
 		Patient bob = new Patient(2);
 		underTest.increasePatientHealth(bob);
@@ -114,13 +114,13 @@ public class SurgeonTest {
 	}
 	@Test
 	public void shouldHaveAnEmployeeNumber() {
-		Surgeon underTest = new Surgeon("Dr. Spaceman", "Emp 1", "buttocks");
+		Surgeon underTest = new Surgeon("Dr. Spaceman", "Emp 1", "buttocks", 12000);
 		String result = underTest.getEmployeeNumber();
 		assertThat(result, is(equalTo("Emp 1")));
 	}	
 	@Test
 	public void shouldHaveADifferentEmployeeNumber() {
-		Surgeon underTest = new Surgeon("Dr. Spaceman","Emp 2", "buttocks");
+		Surgeon underTest = new Surgeon("Dr. Spaceman","Emp 2", "buttocks", 12000);
 		String result = underTest.getEmployeeNumber();
 		assertThat(result, is(equalTo("Emp 2")));
 	}

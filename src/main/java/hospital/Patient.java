@@ -7,44 +7,44 @@ public class Patient {
 
 	private int healthLevel;
 	private int bloodLevel;
-	
-	public Patient () {
-	this.bloodLevel = BLOOD_LEVEL;
-	this.healthLevel = HEALTH_LEVEL;
-	
+
+	public Patient() {
+		this.bloodLevel = BLOOD_LEVEL;
+		this.healthLevel = HEALTH_LEVEL;
+
 	}
-	public Patient (int healthLevel) {
-	this.bloodLevel = BLOOD_LEVEL;
-	this.healthLevel = healthLevel;
-	
-	}	
-	
-	
+
+	public Patient(int healthLevel) {
+		this.bloodLevel = BLOOD_LEVEL;
+		this.healthLevel = healthLevel;
+
+	}
+
 	public int getBloodLevel() {
 		return bloodLevel;
-			}
-
-
-
-	public void reduceBlood() {
-		bloodLevel --; 
-		
 	}
 
+	public void reduceBlood() {
+		bloodLevel--;
 
+	}
 
 	public int getHealthLevel() {
 		// TODO Auto-generated method stub
 		return healthLevel;
 	}
+
 	public void increaseHealth() {
-		healthLevel ++;
-		
+		healthLevel++;
+
 	}
+
+	public void increaseHealth(int healthIncrease) {
+		healthLevel += healthIncrease;
+	}
+
 	public void reduceBlood(int pintsOfBlood) {
-	bloodLevel -= pintsOfBlood;
+		bloodLevel -= pintsOfBlood;
 	}
-	
-	
 
 }
