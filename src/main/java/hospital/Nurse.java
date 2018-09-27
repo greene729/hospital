@@ -33,8 +33,8 @@ public class Nurse extends Employee implements DrawBlood, PatientCare {
 
 	@Override
 	public String toString() {
-		return "Nurse [name=\" + name + \", employeeNumber=\" + employeeNumber + \", salary=\" + salary + numberOfPatients="
-				+ numberOfPatients + "]";
+		return "Nurse [name=" + getName() + ", employeeNumber=" + getEmployeeNumber() + ", salary=" + getSalary()
+				+ ", numberOfPatients=" + numberOfPatients + "]";
 	}
 
 }

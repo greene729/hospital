@@ -20,7 +20,7 @@ public class Receptionist extends Employee {
 	@Override
 	public String toString() {
 		return "Receptionist [name=" + getName() + ", employeeNumber=" + getEmployeeNumber() + ", salary=" + getSalary()
-				+ "isOnPhone=" + isOnPhone() + "]";
+				+ ", isOnPhone=" + isOnPhone() + "]";
 	}
 
 }
